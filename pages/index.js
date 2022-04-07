@@ -6,6 +6,7 @@ import {
   Box,
   SimpleGrid,
   Button,
+  UnorderedList,
   List,
   ListItem,
   useColorModeValue,
@@ -17,9 +18,9 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin, IoLogoMedium } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import thumbSlack from '../public/images/links/slack.png'
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -36,15 +37,56 @@ const Home = () => (
         textAlign="center"
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
       >
-        Hello, I&apos;m a full-stack developer based in Japan!
+        {/* &apos; */}
+        Self-taught, growth-driven, and curious. <br/>
+        I made the 3D voxel using MagicaVoxel and Blender. <br/>
+        Three.js was used to put it on this website!
+
       </Box>
 
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
-            Takuya Matsuyama
+            Justin Clenista
           </Heading>
-          <p>Digital Craftsman ( Artist / Developer / Designer )</p>
+          <p>Software Engineer, Frontend Engineer</p>
+          <Link href="https://github.com/heyoitsJuice" target="_blank">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<IoLogoGithub />}
+            >
+              @heyoitsJuice
+            </Button>
+          </Link>
+          <Link href="https://www.linkedin.com/in/justin-clenista/" target="_blank">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<IoLogoLinkedin />}
+            >
+              @justin-clenista
+            </Button>
+          </Link>
+          <Link href="https://medium.com/@heyoitsjuice" target="_blank">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<IoLogoMedium />}
+            >
+              @heyoitsJuice
+            </Button>
+          </Link>
+          <Link href="https://twitter.com/justinclenista" target="_blank">
+            <Button
+              variant="ghost"
+              colorScheme="teal"
+              leftIcon={<IoLogoTwitter />}
+            >
+              @justinclenista
+            </Button>
+          </Link>
+
         </Box>
         <Box
           flexShrink={0}
@@ -63,7 +105,7 @@ const Home = () => (
             overflow='hidden'
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/justin.jpg"
               alt="Profile image"
               borderRadius='full'
               width="100%"
@@ -73,61 +115,112 @@ const Home = () => (
         </Box>
       </Box>
 
+      <SimpleGrid columns={[1, 2, 2]} gap={6}>
+        <Box>
+
+          <Heading as="h3" variant="section-title">
+            Check my works here!
+          </Heading>
+          <Box my={4}>
+            <NextLink href="/works" scroll={false}>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                My portfolio
+              </Button>
+            </NextLink>
+          </Box>
+        </Box>
+        <Box>
+
+          <Heading as="h3" variant="section-title">
+            Here are my blog posts!
+          </Heading>
+          <Box  my={4}>
+            <NextLink href="/posts" scroll={false}>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                Popular posts
+              </Button>
+            </NextLink>
+          </Box>
+        </Box>
+      </SimpleGrid>
+
+
+
       <Section delay={0.1}>
         <Heading as="h3" variant="section-title">
-          Work
+          About
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" scroll={false}>
+          Justin is a Filipino-American based in San Diego, California with a
+          huge passion and love for technology; so much so that he decided to
+          delve into the incredible world of coding to pique that passion and love!
+          In admist being lost in the journey to find what he wanted to do during
+          university, he realized the joy in being able to create, design, and
+          contribute to software and applications with meaningful impact to others.
+          As a result, he decided to strive to become a software engineer and is
+          currently in pursuit of opportunities to break into the tech space to
+          fufill that said joy.
+
+          {/* <NextLink href="/works/inkdrop" scroll={false}>
             <Link>Inkdrop</Link>
           </NextLink>
-          .
+          . */}
         </Paragraph>
-        <Box align="center" my={4}>
-          <NextLink href="/works" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My portfolio
-            </Button>
-          </NextLink>
-        </Box>
       </Section>
 
+      {/* Turn Bio into a Resume Modal or Image */}
       <Section delay={0.2}>
         <Heading as="h3" variant="section-title">
-          Bio
+          Skills
         </Heading>
-        <BioSection>
-          <BioYear>1984</BioYear>
-          Born in Osaka (大阪), Japan.
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Completed the Master&apos;s Program in the Graduate School of
-          Information Science at Nara Institute of Science and Technology
-          (奈良先端科学技術大学院大学情報科学研究科修士課程)
-        </BioSection>
-        <BioSection>
-          <BioYear>2010</BioYear>
-          Worked at Yahoo! Japan (ヤフー株式会社入社)
-        </BioSection>
-        <BioSection>
-          <BioYear>2012 to present</BioYear>
-          Works as a freelance
-        </BioSection>
+        <Box>
+          <BioYear>Programming Languages:</BioYear>
+          <Box
+            borderRadius="lg"
+            mb={6}
+            p={3}
+            textAlign="center"
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          >
+
+            Javascript, Typescript, HTML, CSS/SaaS/TailwindCSS, Python
+          </Box>
+        </Box>
+        <Box>
+          <BioYear>Libraries/Frameworks:</BioYear>
+          <Box
+            borderRadius="lg"
+            mb={6}
+            p={3}
+            textAlign="center"
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          >
+
+            React, React Native, Expo, Node.js, MaterialUI, ChakraUI, jQuery, Gatsby, Bootstrap, Next.js
+          </Box>
+        </Box>
+        <Box>
+          <BioYear>Other:</BioYear>
+          <Box
+            borderRadius="lg"
+            mb={6}
+            p={3}
+            textAlign="center"
+            bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+          >
+            {/* &apos; */}
+            Agile (Jira), Git, Netlify, Vercel, Cypress, Firebase
+          </Box>
+        </Box>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          I ♥
+          Interests{/* I ♥ */}
         </Heading>
         <Paragraph>
-          Art, Music,{' '}
+          When I'm not geeking out on coding, I...
+          {/* Art, Music,{' '}
           <Link href="https://illust.odoruinu.net/" target="_blank">
             Drawing
           </Link>
@@ -135,85 +228,80 @@ const Home = () => (
           <Link href="https://500px.com/p/craftzdog" target="_blank">
             Photography
           </Link>
-          , Leica, Machine Learning
+          , Leica, Machine Learning */}
+          <BioSection>
+
+            <UnorderedList>
+              <ListItem>
+                Build computers
+              </ListItem>
+              <ListItem>
+                Build keyboards
+              </ListItem>
+              <ListItem>
+                Be active: Basketball, Tennis, Table Tennis, Training for Marathons
+              </ListItem>
+              <ListItem>
+                Sometimes take care of a fluffy samoyed named Sven!
+              </ListItem>
+            </UnorderedList>
+          </BioSection>
         </Paragraph>
       </Section>
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          On the web
+          Miscellaneous
         </Heading>
-        <List>
-          <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @inkdrop_app (English)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
-              >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
-              </Button>
-            </Link>
-          </ListItem>
-        </List>
+
+
 
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            href="https://www.youtube.com/devaslife"
-            title="Dev as Life"
+            href="https://www.youtube.com/channel/UCbW11TtzUx9hu6Ws8sSPimw"
+            title="Youtube"
             thumbnail={thumbYouTube}
           >
-            My YouTube channel
+            Software Engineering Topics made for my slack
           </GridItem>
           <GridItem
-            href="https://www.inkdrop.app/"
-            title="Inkdrop"
-            thumbnail={thumbInkdrop}
+            href="https://join.slack.com/t/codestuffpotato/shared_invite/zt-170xjpwo1-1vXARscvMtsQEwGxPaAHuA"
+            title="code stuff potato"
+            thumbnail={thumbSlack}
           >
-            A Markdown note-taking app
+            A workspace originally made for my friends to assist 
+            each other in penetrating into the tech space.
           </GridItem>
         </SimpleGrid>
 
-        <Box align="center" my={4}>
-          <NextLink href="/posts" scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              Popular posts
-            </Button>
-          </NextLink>
+
+      </Section>
+
+      <Section delay={0.4}>
+        <Heading as="h3" variant="section-title">
+          Contact
+        </Heading>
+        <Box>
+
+          <Heading as="h3" fontSize="20">
+            Currently a work in progress!
+          </Heading>
+          <BioSection>
+            <UnorderedList>
+              <ListItem>
+                If you would like to contact me, shoot me an email at justinalvin98@gmail.com
+              </ListItem>
+            </UnorderedList>
+          </BioSection>
+          <Box my={4}>
+            <NextLink href="/contact" scroll={false}>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                Contact
+              </Button>
+            </NextLink>
+          </Box>
         </Box>
+        <Box></Box>
       </Section>
     </Container>
   </Layout>

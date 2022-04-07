@@ -3,6 +3,14 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 
+import thumbForecast from '../public/images/works/forecast.png'
+import thumbPortfolio from '../public/images/works/portfolio.png'
+import thumbFamily from '../public/images/works/familyproud.png'
+import thumbWip from '../public/images/works/wip.png'
+import thumbKey from '../public/images/works/onlykey.png'
+import thumbBlog from '../public/images/works/blog-creation_01.png'
+
+
 import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
 import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
 import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
@@ -22,29 +30,27 @@ const Works = () => (
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section>
-          <WorkGridItem id="inkdrop" title="Inkdrop" thumbnail={thumbInkdrop}>
-            A Markdown note-taking app with 100+ plugins, cross-platform and
-            encrypted data sync support
+          <WorkGridItem id="forecast" title="Forecast" thumbnail={thumbForecast}>
+            A 5 Day / 3 Hour weather forecast web app utilizing OpenWeatherMap API
           </WorkGridItem>
         </Section>
         <Section>
           <WorkGridItem
-            id="walknote"
-            title="walknote"
-            thumbnail={thumbWalknote}
+            id="portfolio"
+            title="Personal Portfolio"
+            thumbnail={thumbPortfolio}
           >
-            Music recommendation app for iOS
+            A personal portfolio website to showcase myself
           </WorkGridItem>
         </Section>
 
         <Section delay={0.1}>
           <WorkGridItem
-            id="fourpainters"
-            title="The four painters"
-            thumbnail={thumbFourPainters}
+            id="blog-creation"
+            title="Blog Creator"
+            thumbnail={thumbBlog}
           >
-            A video work generated with deep learning, imitating famous four
-            painters like Van Gogh
+            A simple React Native blog creation app
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
@@ -66,48 +72,49 @@ const Works = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.3}>
           <WorkGridItem
-            id="modetokyo"
-            thumbnail={thumbModeTokyo}
-            title="mode.tokyo"
+            id="familyproud"
+            thumbnail={thumbFamily}
+            title="Family Proud"
           >
-            The mode magazine for understanding to personally enjoy Japan
+            A platform for facilitating virtual community for those in need.
           </WorkGridItem>
         </Section>
-        <Section delay={0.3}>
+        {/* <Section delay={0.3}>
           <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
             A VR Creative tools for fashion brands
           </WorkGridItem>
-        </Section>
+        </Section> */}
       </SimpleGrid>
 
       <Section delay={0.4}>
         <Divider my={6} />
 
         <Heading as="h3" fontSize={20} mb={4}>
-          Old works
+          In progress
         </Heading>
       </Section>
 
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         <Section delay={0.5}>
-          <WorkGridItem id="pichu2" thumbnail={thumbPichu2} title="Pichu*Pichu">
-            Twitter client app for iPhone Safari
+          <WorkGridItem id="red-pill-rick" thumbnail={thumbWip} title="Red Pill Rick">
+            E-commerce website for a client 
           </WorkGridItem>
         </Section>
         <Section delay={0.5}>
           <WorkGridItem
-            id="freedbtagger"
-            thumbnail={thumbFreeDBTagger}
-            title="freeDBTagger"
+            id="onlykeyboards"
+            thumbnail={thumbKey}
+            title="onlyKeyboards"
           >
-            Automatic audio file tagging tool using FreeDB for Windows
+            A web scraper that takes in pictoral posts from r/mechanicalkeyboards
+            and showcases it in a conglomerated space.
           </WorkGridItem>
         </Section>
         <Section delay={0.6}>
-          <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Amembo">
+          {/* <WorkGridItem id="amembo" thumbnail={thumbAmembo} title="Amembo">
             P2P private file sharing tool with MSN Messenger integration for
             Windows
-          </WorkGridItem>
+          </WorkGridItem> */}
         </Section>
       </SimpleGrid>
     </Container>

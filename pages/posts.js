@@ -3,6 +3,12 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 
+import thumbSsh from '../public/images/contents/ssh.png'
+import thumbAcc from '../public/images/contents/accessibility.png'
+import thumbCon from '../public/images/contents/conditionals.png'
+import thumbJava from '../public/images/contents/javascript.png'
+import thumbDev from '../public/images/contents/devto.png'
+
 import thumbFishWorkflow from '../public/images/contents/youtube-fish-workflow.jpg'
 import thumbMyDeskSetup from '../public/images/contents/youtube-my-desk-setup.jpg'
 import thumb500PaidUsers from '../public/images/contents/blog-500-paid-users.jpg'
@@ -14,20 +20,20 @@ const Posts = () => (
   <Layout title="Posts">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
-        Popular Posts
+        Videos
       </Heading>
 
       <Section delay={0.1}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="My Fish workflow"
-            thumbnail={thumbFishWorkflow}
-            href="https://www.youtube.com/watch?v=KKxhf50FIPI"
+            title="potato code: ssh"
+            thumbnail={thumbSsh}
+            href="https://www.youtube.com/watch?v=aTXnh1v2bA8"
           />
           <GridItem
-            title="My desk setup (Late 2020)"
-            thumbnail={thumbMyDeskSetup}
-            href="https://www.youtube.com/watch?v=1OFDMwDlnOE"
+            title="potato code: conditionals and states"
+            thumbnail={thumbCon}
+            href="https://www.youtube.com/watch?v=5vJzrxtGCEM"
           />
         </SimpleGrid>
       </Section>
@@ -35,29 +41,33 @@ const Posts = () => (
       <Section delay={0.3}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="How I’ve Attracted The First 500 Paid Users For My SaaS That Costs $5/mo"
-            thumbnail={thumb500PaidUsers}
-            href="https://blog.inkdrop.app/how-ive-attracted-the-first-500-paid-users-for-my-saas-that-costs-5-mo-7a5b94b8e820"
+            title="potato code: accessibility"
+            thumbnail={thumbAcc}
+            href="https://www.youtube.com/watch?v=IQOSzjI8hQk"
           />
           <GridItem
-            title="I stopped setting a financial goal for my SaaS"
-            thumbnail={thumbFinancialGoal}
-            href="https://blog.inkdrop.app/i-stopped-setting-a-financial-goal-for-my-saas-a92c3db65506"
+            title="potato code: javascript"
+            thumbnail={thumbJava}
+            href="https://www.youtube.com/watch?v=f1vHm0_89hk"
           />
         </SimpleGrid>
       </Section>
 
+      <Heading as="h3" fontSize={20} mb={4}>
+        Blog
+      </Heading>
+
       <Section delay={0.5}>
         <SimpleGrid columns={[1, 2, 2]} gap={6}>
           <GridItem
-            title="How to Price Yourself as a Freelance Developer"
-            thumbnail={thumbHowToPriceYourself}
-            href="https://blog.inkdrop.app/how-to-price-yourself-as-a-freelance-developer-3453dfd59d91"
+            title="To new beginnings..."
+            thumbnail={thumbDev}
+            href="https://dev.to/heyoitsjuice/to-new-beginnings-5epg"
           />
           <GridItem
-            title="I made my React Native app 50x faster"
-            thumbnail={thumb50xFaster}
-            href="https://www.youtube.com/watch?v=vj723NlrIQc"
+            title="dev log 01"
+            thumbnail={thumbDev}
+            href="https://dev.to/heyoitsjuice/heyoitsjuice-dev-log-01-33o1"
           />
         </SimpleGrid>
       </Section>
