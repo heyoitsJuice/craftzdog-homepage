@@ -81,7 +81,7 @@ const Navbar = props => {
             Contact
           </LinkItem>
           {/* Turn Source into a Contact Modal or page */}
-          <LinkItem
+          {/* <LinkItem
             target="_blank"
             href="https://github.com/craftzdog/craftzdog-homepage"
             path={path}
@@ -92,7 +92,7 @@ const Navbar = props => {
           >
             <IoLogoGithub />
             Source
-          </LinkItem>
+          </LinkItem> */}
         </Stack>
 
         <Box flex={1} align="right">
