@@ -7,7 +7,7 @@ import {
   SimpleGrid,
   Button,
   UnorderedList,
-  List,
+  // List,
   ListItem,
   useColorModeValue,
   chakra
@@ -18,7 +18,7 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub, IoLogoLinkedin, IoLogoMedium } from 'react-icons/io5'
+import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin, IoLogoMedium } from 'react-icons/io5'
 import thumbYouTube from '../public/images/links/youtube.png'
 import thumbSlack from '../public/images/links/slack.png'
 import Image from 'next/image'
@@ -219,7 +219,7 @@ const Home = () => (
           Interests{/* I ♥ */}
         </Heading>
         <Paragraph>
-          When I'm not geeking out on coding, I...
+          When I&apos;m not geeking out on coding, I...
           {/* Art, Music,{' '}
           <Link href="https://illust.odoruinu.net/" target="_blank">
             Drawing

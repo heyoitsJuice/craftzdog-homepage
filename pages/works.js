@@ -9,17 +9,18 @@ import thumbFamily from '../public/images/works/familyproud.png'
 import thumbWip from '../public/images/works/wip.png'
 import thumbKey from '../public/images/works/onlykey.png'
 import thumbBlog from '../public/images/works/blog-creation_01.png'
+import thumbChello from '../public/images/works/chello.png'
 
 
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
-import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
-import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
-import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
-import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
-import thumbStyly from '../public/images/works/styly_eyecatch.png'
-import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
-import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
+// import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+// import thumbWalknote from '../public/images/works/walknote_eyecatch.png'
+// import thumbFourPainters from '../public/images/works/the-four-painters_eyecatch.jpg'
+// import thumbModeTokyo from '../public/images/works/modetokyo_eyecatch.png'
+// import thumbStyly from '../public/images/works/styly_eyecatch.png'
+// import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
+// import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
+// import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
+// import thumbMenkiki from '../public/images/works/menkiki_eyecatch.png'
 
 const Works = () => (
   <Layout title="Works">
@@ -54,9 +55,8 @@ const Works = () => (
           </WorkGridItem>
         </Section>
         <Section delay={0.1}>
-          <WorkGridItem id="menkiki" thumbnail={thumbMenkiki} title="Menkiki">
-            An app that suggests ramen(noodle) shops based on a given photo of
-            the ramen you want to eat
+          <WorkGridItem id="chello" thumbnail={thumbChello} title="Chello">
+            A kanban board to-do list with drag and drop functionality
           </WorkGridItem>
         </Section>
       </SimpleGrid>

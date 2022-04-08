@@ -11,7 +11,7 @@ const Work = () => (
         Personal Portfolio Website <Badge>April 2022</Badge>
       </Title>
       <P>
-        A portfolio website based on <Link href='https://craftz.dog'>@craftzdog's</Link> website. Learn a bit about
+        A portfolio website based on <Link href='https://craftz.dog'>@craftzdog &apos;s</Link> website. Learn a bit about
         me through my self-introduction, works, and posts.
       </P>
       <List ml={4} my={4}>

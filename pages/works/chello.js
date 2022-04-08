@@ -8,19 +8,19 @@ const Work = () => (
   <Layout title="Inkdrop">
     <Container>
       <Title>
-        Family Proud <Badge>June 2020 - Present</Badge>
+        Chello <Badge>April 2022</Badge>
       </Title>
       <P>
-        A platform for those who are experiencing or have experienced hardship.
-        As a medium for facilitating a virtual community, Family Proud&apos;s mission
-        is to provide a space for caregivers, families, and people in need of help
-        to not only connect with one another, but to overcome adversity.
+        Inspired by the concept of Agile workflow, Chello is a Typescript based 
+        kanban
+        board to-do list with drag and drop functionality from
+        react-beautiful-dnd.
       </P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://www.familyproud.com/app">
-          https://www.familyproud.com/app <ExternalLinkIcon mx="2px" />
+          <Link href="https://chello-heyoitsjuice.vercel.app/">
+          https://chello-heyoitsjuice.vercel.app/ <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
@@ -29,7 +29,7 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>React Native, Typescript, NodeJS, MaterialUI, Firebase</span>
+          <span>Typescript, React, Chakra UI, React-Beautiful-DND</span>
         </ListItem>
         <ListItem>
           <Meta>Blogpost</Meta>
@@ -42,8 +42,8 @@ const Work = () => (
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/familyproud_01.png" alt="familyproud" />
-      <WorkImage src="/images/works/familyproud_02.png" alt="familyproud" />
+      <WorkImage src="/images/works/chello.png" alt="chello" />
+      {/* <WorkImage src="/images/works/blog-creation.png" alt="blog-chello" /> */}
     </Container>
   </Layout>
 )
