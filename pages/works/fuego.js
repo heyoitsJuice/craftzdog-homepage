@@ -8,17 +8,19 @@ const Work = () => (
   <Layout title="Inkdrop">
     <Container>
       <Title>
-        Personal Portfolio Website <Badge>April 2022</Badge>
+        Fuego <Badge>April 2022</Badge>
       </Title>
       <P>
-        A portfolio website based on <Link href='https://craftz.dog'>@craftzdog &apos;s</Link> website. Learn a bit about
-        me through my self-introduction, works, and posts.
+        An open-platform chat app that utilizes Firestore to host and 
+        render messages in real-time. By logging in with your Google
+        Account, you can join in and leave your mark on the most fire
+        chat app in the network.
       </P>
       <List ml={4} my={4}>
         <ListItem>
           <Meta>Website</Meta>
-          <Link href="https://justinclenista.vercel.app/">
-          https://justinclenista.vercel.app/ <ExternalLinkIcon mx="2px" />
+          <Link href="https://fuego-heyoitsjuice.vercel.app/">
+          https://fuego-heyoitsjuice.vercel.app/ <ExternalLinkIcon mx="2px" />
           </Link>
         </ListItem>
         <ListItem>
@@ -27,7 +29,7 @@ const Work = () => (
         </ListItem>
         <ListItem>
           <Meta>Stack</Meta>
-          <span>NextJS, React, ChakraUI, Framer, Three.js</span>
+          <span>React, TailwindCSS, Firebase</span>
         </ListItem>
         <ListItem>
           <Meta>Blogpost</Meta>
@@ -40,8 +42,8 @@ const Work = () => (
         </ListItem>
       </List>
 
-      <WorkImage src="/images/works/portfolio_01.png" alt="Portfolio" />
-      <WorkImage src="/images/works/portfolio_02.png" alt="Portfolio" />
+      <WorkImage src="/images/works/fuego_01.png" alt="fuego" />
+      <WorkImage src="/images/works/fuego_02.png" alt="fuego" />
     </Container>
   </Layout>
 )

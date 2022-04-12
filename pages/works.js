@@ -10,6 +10,7 @@ import thumbWip from '../public/images/works/wip.png'
 import thumbKey from '../public/images/works/onlykey.png'
 import thumbBlog from '../public/images/works/blog-creation_01.png'
 import thumbChello from '../public/images/works/chello.png'
+import thumbFuego from '../public/images/works/fuego_01.png'
 
 
 // import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
@@ -59,6 +60,11 @@ const Works = () => (
             A kanban board to-do list with drag and drop functionality
           </WorkGridItem>
         </Section>
+        <Section delay={0.1}>
+          <WorkGridItem id="fuego" thumbnail={thumbFuego} title="Fuego">
+            An open-platform chat app
+          </WorkGridItem>
+        </Section>
       </SimpleGrid>
 
       <Section delay={0.2}>
@@ -80,8 +86,8 @@ const Works = () => (
           </WorkGridItem>
         </Section>
         {/* <Section delay={0.3}>
-          <WorkGridItem id="styly" thumbnail={thumbStyly} title="Styly">
-            A VR Creative tools for fashion brands
+          <WorkGridItem id="fuego" thumbnail={thumbFuego} title="Fuego">
+            An open-platform chat app
           </WorkGridItem>
         </Section> */}
       </SimpleGrid>
