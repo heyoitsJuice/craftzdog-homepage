@@ -71,6 +71,15 @@ const Posts = () => (
           />
         </SimpleGrid>
       </Section>
+      <Section delay={0.7}>
+        <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <GridItem
+            title="dev log 02"
+            thumbnail={thumbDev}
+            href="https://dev.to/heyoitsjuice/dev-log-02-2cdl"
+          />
+        </SimpleGrid>
+      </Section>
     </Container>
   </Layout>
 )
